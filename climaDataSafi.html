@@ -24,7 +24,12 @@
 
 
 
+<style>
+    body{
+        background-color: black;
 
+    }
+</style>
 
 
 <script>
@@ -32,58 +37,74 @@
 
     // Global Options
        Chart.defaults.global.defaultFontFamily = 'Lato';
-       Chart.defaults.global.defaultFontSize = 18;
-       Chart.defaults.global.defaultFontColor = '#777';
+       Chart.defaults.global.defaultFontSize = 20;
+       Chart.defaults.global.defaultFontColor = '#FFFFFF';
 
     let massPopChart = new Chart(myChart , {
 
-          type: 'bar',
+          type: 'horizontalBar',
           data: {
-              labels:['Casablanca', 'Rabat', 'Fes', 'Sale', 'Marrakesh','Agadir'],
+            labels:['Jan', 'Fed', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
               datasets:[{
-                  label: 'Population',
+                  label: 'Average high °C (°F)',
                   data:[
-                        3144909,
-                        1655753,
-                        964891,
-                        903485,
-                        839296,
-                        698310,
+                       18.2,
+                       19.0,
+                       20.6,
+                       21.3,
+                       23.3,
+                       24.6,
+                       28.8,
+                       29.2,
+                       27.6,
+                       25.2,
+                       21.6,
+                       18.8
 
                   ],
                   backgroundColor:[
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)',
-                    'rgba(255, 99, 132, 0.6)'
+                    
+                    'rgba(159, 7, 65)', 
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',      
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    'rgba(159, 7, 65)',
+                    
                  ],
                  borderWidth:1,
-                 borderColor:'#000000',
+                 borderColor:'#777',
                  hoverBorderWidth:3,
-                 hoverBorderColor:'#000'
+                 hoverBorderColor:'#FFF'
               }]
-          },
+            },
           options:{
+              label:{
+                  color:'#FFFFFF'
+              },
                 title:{
                     display:true,
-                    text:'Largest Cities In Morroco',
+                    text:'Climate data for Safi (rainfull, snow) In mm',
                     fontSize:30,
-                    color:'black'
+                    color:'#FFFFFF'
                 },
 
                 legend:{
                     display:true,
                     position:'right',
                     labels:{
-                        fontColor:'#000'
+                        fontColor:'#FFFFFF'
                     }
                 },
                 layout:{
                     padding:{
-                        left:50,
+                        left:40,
                         bottom:0,
                         top:0,
                         right:0,
@@ -94,6 +115,9 @@
                 }
         }, 
     });
+    
+
+
 </script>
 
 
